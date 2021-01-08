@@ -3,7 +3,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       color: 'white',
-      font: '10px'
+      fontSize: '22px'
     }
   })
 )
