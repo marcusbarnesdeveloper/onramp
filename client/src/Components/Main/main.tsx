@@ -1,7 +1,28 @@
 import React from 'react';
+import useStyles from './mainCSS';
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
 
-const main = () => {
-  return <div>main</div>;
+
+const Main = () => {
+  const classes = useStyles();
+  return(
+    <div
+      className={classes.root}
+    >
+     <div className={classes.temp}>
+       <span className={classes.icon}>
+         <WbSunnyIcon fontSize='small'/>
+       </span>
+       <span>&#176;90</span>
+       <span>Chino,CA</span>
+     </div>
+     <div className={classes.times}>
+       <span className={classes.selected}>Minute</span>
+       <span>Hourly</span>
+       <span>Daily</span>
+     </div>
+    </div>
+  )
 }
 
-export default main;
+export default Main;
