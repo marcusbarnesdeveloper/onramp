@@ -1,27 +1,19 @@
 import React from 'react';
-import useStyles from './mainCSS';
-import WbSunnyIcon from '@material-ui/icons/WbSunny';
+// import useStyles from './mainCSS';
+import WeatherMainCard from './Components/weatherCardMain';
+import Tabs from './Components/Tabs/tabs';
+import Grid from '@material-ui/core/Grid';
 
 
 const Main = () => {
-  const classes = useStyles();
   return(
-    <div
-      className={classes.root}
+    <Grid
+      container
+      direction='column'
     >
-     <div className={classes.temp}>
-       <span className={classes.icon}>
-         <WbSunnyIcon fontSize='small'/>
-       </span>
-       <span>&#176;90</span>
-       <span>Chino,CA</span>
-     </div>
-     <div className={classes.times}>
-       <span className={classes.selected}>Minute</span>
-       <span>Hourly</span>
-       <span>Daily</span>
-     </div>
-    </div>
+      <Tabs />
+      <WeatherMainCard />
+    </Grid>
   )
 }
 
