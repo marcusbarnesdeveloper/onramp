@@ -5,10 +5,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: 'red',
       font: '10px'
     },
-    textField: {
-      border: "1px solid white",
-      background: "white"
-    }
   })
 )
 
