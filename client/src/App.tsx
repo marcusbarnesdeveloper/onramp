@@ -11,7 +11,6 @@ const App = (message: string) => {
       <Grid
         container
         direction="column"
-        justify="space-between"
         alignItems="center"
         className={classes.root}
       >
