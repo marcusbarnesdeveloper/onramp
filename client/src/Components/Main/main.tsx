@@ -3,6 +3,7 @@ import React from 'react';
 import WeatherMainCard from './Components/WeatherCardMain/weatherCardMain';
 import ForeCastCard from './Components/Forecast/forecast';
 import Tabs from './Components/Tabs/tabs';
+import WeatherCardSecondary from './Components/WeatherCardSecondary/weatherCardSecondary';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -12,9 +13,10 @@ const Main = () => {
       container
       direction='column'
     >
-      {/* <Tabs />
-      <WeatherMainCard /> */}
+      <Tabs />
+      <WeatherMainCard />
       <ForeCastCard />
+      <WeatherCardSecondary />
     </Grid>
   )
 }
