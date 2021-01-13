@@ -47,7 +47,7 @@ Please list examples of how your project meets the following requirements below:
       i am using express and node to serve data.
 - [x] Usage of at least 5 UI components from the [material-ui/@core](https://material-ui.com/) library (if you are not using React, a comparable UI library is acceptable)  box,grid,typography,icon, styles, cardContent, Card,
 
-- [ ] An example of a reusable UI component that you have created and used in the app. This should be different than the 5 UI components from the vendor library.
+- [x] An example of a reusable UI component that you have created and used in the app. This should be different than the 5 UI components from the vendor library.
 i use weatheritem for both daily and hourly compoonents
 <WeatherItem />
 
