@@ -8,8 +8,16 @@ import { Typography } from '@material-ui/core';
 import WeatherItem from './Components/weatherItems';
 
 
-const WeatherCardSecondary = () => {
-  const classes = useStyles();
+interface Props {
+  city: string,
+  state: string,
+  selected: string,
+  hourly: any,
+  daily: any,
+}
+const WeatherCardSecondary : React.FC<Props> = (props) => {
+ const classes = useStyles();
+ console.log(props.selected);
   return(
     <Grid
       container
@@ -19,18 +27,22 @@ const WeatherCardSecondary = () => {
       <Card>
         <CardContent>
           <Typography className={classes.type}>
-            Minutely Weather<span className={classes.location}> - Chino,Ca</span>
-          </Typography>
-          <Typography className={classes.location}>
-            as of 1:00pm PST
-          </Typography>
-          <Typography>
-            Monday, January 11
+            {props.selected} Weather<span className={classes.location}> - {props.city},{props.state}</span>
           </Typography>
           <div>
-            <WeatherItem/>
-            <WeatherItem/>
-            <WeatherItem/>
+            { props.selected === 'Hourly' ? props.hourly.map((h:any) => {
+              const date = new Date(h.dt*100);
+              const hour = date.getHours();
+              const minute = date.getMinutes();
+              const hourlyTime = `${hour} : ${minute}`;
+              return <WeatherItem time={hourlyTime} temp={h.temp}icon={h.weather[0].icon}weather={h.weather[0].main} humidity={h.humidity}/>
+            }):  props.daily.map((d : any) => {
+              const date = new Date(d.dt*100);
+              const days = date.getDay();
+              const month = date.getMonth();
+              const dailyTime = `${days} / ${month}`;
+              return <WeatherItem time={dailyTime} temp={d.temp.day}icon={d.weather[0].icon}weather={d.weather[0].main} humidity={d.humidity}/>
+            })}
           </div>
         </CardContent>
       </Card>

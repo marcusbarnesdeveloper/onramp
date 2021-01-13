@@ -3,7 +3,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100%',
-      background: 'green',
       padding: "10px 0",
       color: 'white',
       textTransform: 'capitalize',
@@ -17,13 +16,14 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center'
     },
     icon: {
-      color: 'yellow',
+      maxWidth: 50,
     },
     times: {
       flex: 2,
       display: 'flex',
       justifyContent: 'space-evenly',
-      alignItems: 'center'
+      alignItems: 'center',
+      cursor: 'pointer',
     },
     selected: {
       textDecoration: 'underline'

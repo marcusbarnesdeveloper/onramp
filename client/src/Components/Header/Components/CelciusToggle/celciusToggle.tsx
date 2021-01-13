@@ -1,22 +1,24 @@
 import React from 'react';
-import  useStyles  from './celciusToggleCSS';
-import Box from '@material-ui/core/Box';
-import FormGroup from '@material-ui/core/FormGroup';
-import Switch from '@material-ui/core/Switch';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import useStyles from './celciusToggleCSS';
 
 
+interface Props {
+  unit: boolean,
+  changeUnit: () => void,
+}
 
-
-const CelciusToggle = () => {
+const FloatingActionButton: React.FC<Props> = (props)  => {
   const classes = useStyles();
-  return(
-    <Box className={classes.root}>
-     <FormGroup row>
-       <Switch/>
-       <span>&#176;C</span>
-     </FormGroup>
-    </Box>
+
+  return (
+    <div className={classes.root} onClick={props.changeUnit}>
+      <Fab color="primary" aria-label="add" size='small'>
+       &#176;{props.unit ? 'F' : 'C'}
+      </Fab>
+    </div>
   );
 }
 
-export default CelciusToggle;
+export default FloatingActionButton;

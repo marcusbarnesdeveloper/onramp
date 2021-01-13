@@ -6,13 +6,15 @@ import Search from './Components/Search/search';
 import CelciusToggle from './Components/CelciusToggle/celciusToggle';
 
 interface Props {
-  change: (e: any) => void;
-  submit: (e: any) => void;
+  change: (e: any) => void,
+  submit: (e: any, city?: string, state?: string) => void,
+  unit: boolean,
+  changeUnit: () => void,
   city: string,
   state: string,
 }
 
-const Header : React.FC<Props> = ({change, submit, city, state}) => {
+const Header : React.FC<Props> = ({change, submit, city, state,unit, changeUnit}) => {
   const classes = useStyles();
 
   return(
@@ -25,7 +27,7 @@ const Header : React.FC<Props> = ({change, submit, city, state}) => {
     >
      <Logo />
      <Search change={change} city={city}state={state} submit={submit}/>
-     <CelciusToggle/>
+     <CelciusToggle unit={unit} changeUnit={changeUnit}/>
     </Grid>
   );
 }

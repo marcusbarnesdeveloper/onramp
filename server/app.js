@@ -4,13 +4,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const Weather = require('./Controller.js');
 const axios = require('axios');
-
+const cors = require('cors');
 
 var app = express();
 const port = 8080;
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(cookieParser());
 app.set('view engine', 'html');
 
@@ -42,7 +43,7 @@ app.get('/api/weather', async (req, res) => {
   try {
     let {lat, lon} = req.query;
     const key = '0dc80bd45e6d151609478625bce41471';
-    const url =  `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}`;
+    const url =  `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`;
     let {data} = await axios.get(url);
     res.send(data);
   } catch(err) {

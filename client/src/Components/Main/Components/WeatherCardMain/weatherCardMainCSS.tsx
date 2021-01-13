@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       width: '50%',
-      margin: '0 auto',
+      margin: '50px auto',
       padding: '10px'
     },
     half: {
