@@ -22,9 +22,9 @@ const Tabs : React.FC<Props> = (props) => {
     <span>{props.city},{props.state}</span>
   </div>
   <div className={classes.times}>
-    <span onClick={() => props.tab('current')}>Current</span>
-    <span onClick={() => props.tab('Hourly')}>Hourly</span>
-    <span onClick={() => props.tab('Daily')}>Daily</span>
+    <button onClick={() => props.tab('current')} tabIndex={0}>Current</button>
+    <button onClick={() => props.tab('Hourly')} tabIndex={0}>Hourly</button>
+    <button onClick={() => props.tab('Daily')} tabIndex={0}>Daily</button>
   </div>
 </div>
   )

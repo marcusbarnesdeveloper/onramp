@@ -11,7 +11,7 @@ const Logo = () => {
   return(
     <Box className={classes.root}>
       <span>
-        <CloudOutlinedIcon/>
+        <CloudOutlinedIcon />
       </span>
       <span>
         WeatherWatch
