@@ -26,26 +26,26 @@ Header                    Main                                 Footer
     Search                   WeathercardMain
     CelciusToggle            WeatcherCardSecondary
                                 WeatcherItem
-![WeatherCardMainComponent](https://imgur.com/FVCKHat "Weather Card main")
-![WeatherCardSecondaryComponent](https://imgur.com/VQ8hJ3f "Weather Card daily")
-![FooterComponent](https://imgur.com/3Vf72kp "Footer")
-![HeaderComponent](https://imgur.com/lRVI2xZ "Header")
-![TabsComponent](https://imgur.com/VJjaAcr "Tab component")
-![WeatherCardSecondaryComponent](https://imgur.com/l3XynN0 "Weather Card hourly")
+![WeatherCardMainComponent](https://i.imgur.com/FVCKHat.png "Weather Card main")
+![WeatherCardSecondaryComponent](https://imgur.com/VQ8hJ3f.png "Weather Card daily")
+![FooterComponent](https://imgur.com/3Vf72kp.png "Footer")
+![HeaderComponent](https://imgur.com/lRVI2xZ.png "Header")
+![TabsComponent](https://imgur.com/VJjaAcr.png "Tab component")
+![WeatherCardSecondaryComponent](https://imgur.com/l3XynN0.png "Weather Card hourly")
 ## Project Requirements
 Please list examples of how your project meets the following requirements below:
-- [ ] Use a modern JS Library/Framework like React, Angular, etc. We suggest using React.js.
+- [x] Use a modern JS Library/Framework like React, Angular, etc. We suggest using React.js.
     I am using react
-- [ ] Create an application that can be interacted with in a minimum of three different ways by the user.
+- [x] Create an application that can be interacted with in a minimum of three different ways by the user.
     the user can enter city, enter a state, toggle between farenheit and celcius, switch betweent current informaion, daily, or hourly
-- [ ] Use of at least one Service.
+- [x] Use of at least one Service.
       openweather api
       opencagedata
-- [ ] The usage of a specified architectural pattern (MVC, MVP, MVVM,  etc.)
+- [x] The usage of a specified architectural pattern (MVC, MVP, MVVM,  etc.)
       I followed an mvc. most components are just views with limited logic. I made an interface as a model for weather data, controllers reach out to services
-- [ ] Use of a [REST API](https://medium.com/@arteko/the-best-way-to-use-rest-apis-in-swift-95e10696c980).
+- [x] Use of a [REST API](https://medium.com/@arteko/the-best-way-to-use-rest-apis-in-swift-95e10696c980).
       i am using express and node to serve data.
-- [ ] Usage of at least 5 UI components from the [material-ui/@core](https://material-ui.com/) library (if you are not using React, a comparable UI library is acceptable)  box,grid,typography,icon, styles, cardContent, Card,
+- [x] Usage of at least 5 UI components from the [material-ui/@core](https://material-ui.com/) library (if you are not using React, a comparable UI library is acceptable)  box,grid,typography,icon, styles, cardContent, Card,
 
 - [ ] An example of a reusable UI component that you have created and used in the app. This should be different than the 5 UI components from the vendor library.
 i use weatheritem for both daily and hourly compoonents
