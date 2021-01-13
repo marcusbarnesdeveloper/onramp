@@ -7,7 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 interface Props {
   change: (e : any) => void;
-  submit: () => void;
+  submit: (e : any) => void;
   city: string;
   state: string;
 }

@@ -19,7 +19,8 @@ const App : React.FC = () => {
       setState(e.target.value);
     }
   }
-  const handleSubmit = () : void => {
+  const handleSubmit = (e: any) : void => {
+    e.preventDefault();
     Controller.translateCityToLatLong(city, state)
     .then((data : object) => {
       setWeather(data);

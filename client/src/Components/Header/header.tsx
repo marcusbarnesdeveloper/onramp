@@ -7,7 +7,7 @@ import CelciusToggle from './Components/CelciusToggle/celciusToggle';
 
 interface Props {
   change: (e: any) => void;
-  submit: () => void;
+  submit: (e: any) => void;
   city: string,
   state: string,
 }
